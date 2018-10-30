@@ -17,15 +17,22 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from apps.formulario.views import index,formulario_view
 from django.conf import settings
+<<<<<<< HEAD
 from django.contrib.auth.views import login, logout
+=======
+>>>>>>> 7e29db11c3e125ffec6bca5cbdb64ed8e348db2e
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^formulario/', formulario_view, name='contacto'),
+<<<<<<< HEAD
      url(r'^rescate/', include('apps.rescate.urls')),
      url(r'^login/$', login),
     url(r'^logout/$', logout),
+=======
+    url(r'^rescate/', include('apps.rescate.urls')),
+>>>>>>> 7e29db11c3e125ffec6bca5cbdb64ed8e348db2e
 ]
 
 if settings.DEBUG:

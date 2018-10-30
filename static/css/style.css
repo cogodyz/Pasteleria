@@ -17,28 +17,28 @@ header
     background-color:#79F3C8; 
 }
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .nav-link
 {
-  margin: 0 12px;
-  color: whitesmoke;
- font-weight: 600;
+    margin: 0 60px;
+    color: whitesmoke;
+    font-weight: 600;
   
 }
 .nav-link:hover
 {
-  background: whitesmoke;
-  color:black; 
+    background: whitesmoke;
+    color:black; 
 }
 .navbar-toggler:hover
 {
-background: white;
+    background: white;
 
 }
 .navbar-brand:hover
 {
-opacity: 0.2;
+    opacity: 0.2;
 }
 .Seccion1
 {
@@ -88,9 +88,9 @@ footer a {
 }
 .Seccion2 h2{
     color: black;
-font-size: 30px;
-font-weight: bold;
-margin: 7px 0px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 7px 0px;
 }
 @media screen and (max-width: 380px)
 {
