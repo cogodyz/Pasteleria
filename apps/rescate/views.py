@@ -19,3 +19,5 @@ def crea_rescate(request):
         'form': form,
     }
     return render(request,'rescate/nuevo.html',context)
+
+

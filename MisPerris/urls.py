@@ -17,11 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from apps.formulario.views import index,formulario_view
 from django.conf import settings
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^formulario/', formulario_view, name='contacto'),
-     url(r'^rescate/', include('apps.rescate.urls')),
+    url(r'^rescate/', include('apps.rescate.urls')),
 ]
 
 if settings.DEBUG:
