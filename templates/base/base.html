@@ -14,43 +14,39 @@
     <link rel="stylesheet" href="{% static 'css/galery2.css' %}">
 </head>
 <body>
-<div class="container-fluid" >
+<div class="container-fluid" style="background: #79F3C8" class="row login">
+    {% if user.is_authenticated %}
+
+    <form method="post" action="/logout/">
+
+       {% csrf_token %}
+
+       Bienvenido: {{user}}
+
+       <input type="submit" value="Salir" />
+
+       <input type="hidden" name="next" value="{% url 'index' %}">
+
+    </form>
+
+{% else %}
+
+    <form method="post" action="/login/">
+
+       {% csrf_token %}
+
+       Usuario <input type="text" name="username">
+
+       Password <input type="password" name="password">
+
+       <input type="submit" value="Entrar" />
+
+       <input type="hidden" name="next" value="{% url 'index' %}">
+
+    </form>
+
+{% endif %}
         <header class="row  sticky-top">
-
-            <div class="Container-login" style="background: #79F3C8" class="row login">
-                {% if user.is_authenticated %}
-            
-                  <form method="post" action="/logout/">
-            
-                   {% csrf_token %}
-            
-                   Bienvenido: {{user}}
-            
-                   <input type="submit" value="Salir" />
-            
-                   <input type="hidden" name="next" value="{% url 'index' %}">
-            
-                  </form>
-            
-                {% else %}
-            
-                  <form method="post" action="/login/">
-            
-                   {% csrf_token %}
-            
-                   Usuario <input type="text" name="username">
-            
-                   Password <input type="password" name="password">
-            
-                   <input type="submit" value="Entrar" />
-            
-                   <input type="hidden" name="next" value="{% url 'index' %}">
-                   
-                {% endif %}
-                  </form>
-              </div>
-
-
                 <nav class="navbar col-12   navbar-expand-md">
                     <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" width="260" height="52" alt="NO HAYs"></a>
                     <button class="navbar-toggler   custom-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,11 +71,6 @@
                       </ul>
                     </div>
                   </nav>
-
-                  
-
-
-
             </header>
 
             {% block content %}
