@@ -52,13 +52,27 @@ div.social img
 }
 div.social a
 {
-   
     padding: 0 12px;
 }
 div.social a:hover
 {
     opacity: 0.4;
 }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(125, 196, 180);
+	color: black;
+	padding: 20px;
+	margin-top: 20px;
+    
+}
+
+footer a {
+	color: black;
+}
+
 .campaña
 {
     text-decoration: none;

@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock  %} | Mis perris  </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/logo2.jpg' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/galery2.css' %}">
 </head>
 <body>
 <div class="container-fluid">
@@ -32,7 +35,7 @@
                           </ul>
                         </div> 
                         <li class="nav-item">
-                          <a class="nav-link " href="{% url 'contacto' %}">Contacto</a>
+                          <a class="nav-link " href="{% url 'contacto' %}">Regístrate</a>
                         </li>
                       </ul>
                     </div>
@@ -51,7 +54,7 @@
                       <br>+569 9 876 654 31
                   </a>
                   <div class="row justify-content-center mt-4 mb-4">
-              <div class="social  ">
+                  <div class="social  ">
                   <a  href="#">
                    <img src="{% static 'img/icons/facebook.png' %}" width="32" height="32" alt="">
                  </a>
@@ -68,7 +71,6 @@
               </div>
           </div>
               </div>
-  
           </footer>
    <!-- FIN DEL CONTAINER -->   
 </div>
