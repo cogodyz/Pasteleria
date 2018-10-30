@@ -1,0 +1,20 @@
+.galery {
+    background:rgb(80, 158, 140);
+    width: 94%;
+    height: 95%;
+    margin: 3%;
+    border: 2px solid black;
+}
+
+.photos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.photos img{
+    height: 135px;
+    margin: 10px;
+}
