@@ -17,11 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from apps.formulario.views import index,formulario_view
 from django.conf import settings
+from django.contrib.auth.views import login, logout
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^formulario/', formulario_view, name='contacto'),
      url(r'^rescate/', include('apps.rescate.urls')),
+     url(r'^login/$', login),
+    url(r'^logout/$', logout),
 ]
 
 if settings.DEBUG:
