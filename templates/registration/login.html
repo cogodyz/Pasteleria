@@ -9,37 +9,3 @@
    <p> Falló inicio de sesion verifica tus datos e intentalo de nuevo</p>
 
 {% endblock %}
-
-
-
-{% if user.is_authenticated %}
-
-    <form method="post" action="/logout/">
-
-       {% csrf_token %}
-
-       Bienvenido: {{user}}
-
-       <input type="submit" value="Salir" />
-
-       <input type="hidden" name="next" value="/">
-
-    </form>
-
-{% else %}
-
-    <form method="post" action="/login/">
-
-       {% csrf_token %}
-
-       Usuario <input type="text" name="username">
-
-       Password <input type="password" name="password">
-
-       <input type="submit" value="Entrar" />
-
-       <input type="hidden" name="next" value="/">
-
-    </form>
-
-{% endif %}

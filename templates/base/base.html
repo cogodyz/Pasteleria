@@ -15,6 +15,37 @@
 </head>
 <body>
 <div class="container-fluid">
+    {% if user.is_authenticated %}
+
+    <form method="post" action="/logout/">
+
+       {% csrf_token %}
+
+       Bienvenido: {{user}}
+
+       <input type="submit" value="Salir" />
+
+       <input type="hidden" name="next" value="{% url 'index' %}">
+
+    </form>
+
+{% else %}
+
+    <form method="post" action="/login/">
+
+       {% csrf_token %}
+
+       Usuario <input type="text" name="username">
+
+       Password <input type="password" name="password">
+
+       <input type="submit" value="Entrar" />
+
+       <input type="hidden" name="next" value="{% url 'index' %}">
+
+    </form>
+
+{% endif %}
         <header class="row  sticky-top">
                 <nav class="navbar col-12   navbar-expand-md">
                     <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" width="260" height="52" alt="NO HAYs"></a>
