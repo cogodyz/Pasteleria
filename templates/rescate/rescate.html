@@ -4,16 +4,15 @@
     {% for resc in rescata  %}
        <div class="row  text-md-left text-center mt-5 mb-2">
             
-           <div class="col-lg-4 col-md-4 offset-lg-1  ">
+           <div class="col-lg-4 col-md-4 offset-lg-1" style="background-color:rgb(187, 91, 35);">
             {% if resc.imagen %}
-            <img class="img-fluid mb-2" src="{{resc.imagen.url}}" alt="">
+            <img class="img-fluid mb-2" src="{{resc.imagen.url}}" style="margin-top: 10px;" alt="">
            {% endif %}
            </div>
-           <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading title">{{resc.nombrePerro}}</h2>
-                <p>Raza del perrito: {{resc.razaP}}</p>
-                <p>Descripcion: {{resc.descripcion}}</p>
-                <p>Estado del perrito: {{resc.estado}}</p>
+           <div class="col-lg-7 col-md-8" style="background-color:rgb(241, 187, 85);">
+                <h2 class="section-heading title">{{resc.nombreProducto}}</h2>
+                <p>Descripción: {{resc.descripciónProducto}}</p>
+                <p>Precio: ${{resc.precioProducto}}</p>
                  
            </div> 
        </div>

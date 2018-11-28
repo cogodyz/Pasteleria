@@ -5,27 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock  %} | Mis perris  </title>
+    <title>{% block title %}{% endblock  %} ~ Pasteleria Andrew </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" href="{% static 'img/logo2.jpg' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
-    <link rel="stylesheet" href="{% static 'css/galery2.css' %}">
 </head>
 <body>
 <div class="container-fluid" >
         <header class="row  sticky-top">
 
            
-            <div class="Container-login" style="background: #79F3C8" class="row login">
+            <div class="Container-login" style="background: rgb(179, 135, 16)" class="row login">
                 {% if user.is_authenticated %}
             
                   <form method="post" action="/logout/">
             
                    {% csrf_token %}
             
-                   Bienvenido: {{user}}
+                   <b>Bienvenido: {{user}}</b>
             
                    <input type="submit" value="Salir" />
             
@@ -39,9 +37,9 @@
             
                    {% csrf_token %}
             
-                   Usuario <input type="text" name="username">
+                   <b>Usuario</b> <input type="text" name="username">
             
-                   Password <input type="password" name="password">
+                   <b>Password</b> <input type="password" name="password">
             
                    <input type="submit" value="Entrar" />
             
@@ -53,25 +51,20 @@
               
               
                 <nav class="navbar col-12   navbar-expand-md">
-                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" width="260" height="52" alt="NO HAYs"></a>
+                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo_p.png' %}" width="180" height="100" alt=""></a>
                     <button class="navbar-toggler   custom-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav text-center mx-auto ">
                         <li class="nav-item active">
-                          <a class="nav-link" href="{% url 'index' %}">Inicio</span></a>
+                          <a class="nav-link" href="{% url 'index' %}">INICIO</span></a>
                         </li>
-                        <div class="dropdown ">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rescatados
-                          <span class="caret"></span></button>
-                          <ul class="dropdown-menu text-center">
-                            <li><a href="{% url 'ver' %}">Ver perritos rescatados</a></li>
-                            <li><a href="{% url 'crea' %}">Añadir rescatado</a></li>
-                          </ul>
-                        </div> 
                         <li class="nav-item">
-                          <a class="nav-link " href="{% url 'contacto' %}">Regístrate</a>
+                          <a class="nav-link " href="{% url 'ver' %}">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="{% url 'contacto' %}">REGÍSTRATE</a>
                         </li>
                       </ul>
                     </div>
@@ -83,9 +76,9 @@
             {% endblock %}
 
 
-            <footer style="background: #69F7B5"class="row p-3">
+            <footer style="background:rgb(179, 135, 16)"class="row p-3">
               <div class="cont">
-                  <p class="copy">Mis Perris &copy; 2018</p>
+                  <p class="copy">Pasteleria Andrew &copy; 2018</p>
                   <a href="tel:56998765431">
                       <br>+569 9 876 654 31
                   </a>

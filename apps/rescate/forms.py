@@ -1,16 +1,15 @@
 from django import forms
-
-from apps.rescate.models import perrito
+from apps.rescate.models import Producto
 
 class formServicio(forms.ModelForm):
     class Meta:
-        model = perrito
+        model = Producto
         fields = [
-            'nombrePerro',
-            'razaP',
-            'descripcion',
+            'códigoProducto',
+            'nombreProducto',
+            'descripciónProducto',
+            'precioProducto',
             'imagen',
-            'estado',
         ]
 
 

@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
-from .models import perrito
+from .models import Producto
 from apps.rescate.forms import formServicio
 # Create your views here.
 def lista_rescate(request):
-    rescata = perrito.objects.all()
+    rescata = Producto.objects.all()
     return render(request, "rescate/rescate.html",{'rescata':rescata})
 
 def crea_rescate(request):

@@ -10,11 +10,11 @@
 
 header
 {
-    background-color:#79F3C8;
+    background-color:rgb(179, 135, 16);
 }
 .rescateL
 {
-    background-color:#79F3C8; 
+    background-color:rgb(179, 135, 16); 
 }
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -42,7 +42,7 @@ header
 }
 .Seccion1
 {
-    background-color: #58E2B2; 
+    background-color: white; 
     
 }
 div.social img
@@ -113,7 +113,9 @@ footer a {
 
 .Articulo2-2
 {  
-        background-image: url(http://minimal-wallpapers.com/wp-content/uploads/2015/09/dog-minimalistic-wallpaper-light.png);
+    background-image: url(http://sitios.amarillas.com/wp-content/uploads/sites/2483/2016/01/pasteleria-la-abuelita-slider-fondo.jpg);
+    margin-top: 20px;
+    border: black 2px solid;
 }
 .galeria .contenedor-imagen {
 	margin-bottom: 40px;
